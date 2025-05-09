@@ -1,0 +1,9 @@
+@use '../variables'as v;
+
+.cover {
+  width: 50%;
+
+  @include v.mq() {
+    width: 100%;
+  }
+}
