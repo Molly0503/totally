@@ -1,8 +1,29 @@
 @use '../variables'as v;
 
 .item {
-  &-img {
-    margin-inline: auto;
+  padding-block: 50px 110px;
+
+  @include v.mq() {
+    padding-top: 0;
+    padding-inline: 0;
+  }
+
+  .inner-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    @include v.mq() {
+      row-gap: 10px;
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &-container {
+    padding-left: 60px;
+
+    @include v.mq() {
+      padding-inline: 16px;
+    }
   }
 
   &-description {
@@ -49,7 +70,6 @@ tbody {
   th {
     border-right: v.$c-gray 1px solid;
   }
-
 }
 
 .order {
@@ -87,7 +107,6 @@ tbody {
 }
 
 .size {
-
   table,
   table td {
     border: v.$c-gray 1px solid;

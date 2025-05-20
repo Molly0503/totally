@@ -4,55 +4,34 @@
 // Container
 // -----------------------------------
 
-.header-container {
-  display: flex;
+.container {
+  max-width: v.$base-width-pc;
+  padding-inline: 16px;
   margin-inline: auto;
+}
+
+.inner-container {
   max-width: v.$width-main;
-  flex-direction: column;
-  align-items: center;
-  row-gap: 36px;
-  
-  @include v.mq() {
-    flex-direction: column;
-    max-width: v.$width-sp;
-    row-gap: 26px;
-  }
-}
-
-.main-container {
-  max-width: calc(v.$width-main + 16px * 2);
-  padding-top: 191px;
-  padding-bottom: 110px;
-  column-gap: 60px;
   margin-inline: auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-
-  @include v.mq() {
-    padding-top: 111px;
-    row-gap: 10px;
-    grid-template-columns: 1fr;
-  }
 }
-
 
 // -----------------------------------
 // 各セクションの余白
 // -----------------------------------
-.header,
-.main,
-.footer {
-  padding-inline: 16px;
-}
+// .header,
+// .main,
+// .footer {
+//   padding-inline: 16px;
+// }
 
-.main-container {
-  @include v.mq() {
-    padding-inline: 0;
-  }
-}
+// .main-container {
+//   @include v.mq() {
+//     padding-inline: 0;
+//   }
+// }
 
-.item-container {
-  @include v.mq() {
-    padding-inline: 16px;
-  }
-}
+// .item-container {
+//   @include v.mq() {
+//     padding-inline: 16px;
+//   }
+// }
